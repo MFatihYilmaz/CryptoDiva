@@ -76,7 +76,7 @@ $users = $model->getUsers();
       </td>
       
       <td>
-      <a href="delete?user-id=' . $user["id"] . '">Delete</a>
+      <a href="./delete?user-id=' . $user["id"] . '">Delete</a>
         
       </td>
     </tr>

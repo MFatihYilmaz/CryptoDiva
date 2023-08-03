@@ -1,8 +1,8 @@
 <?php 
 session_start();
-require("instance.php");
+require("../includes/instance.php");
 ini_set("display_errors",0);
-include("validate.php");
+include("../includes/validate.php");
 
 if($token->u_id!=$_GET["uid"]){
   error(401,"");

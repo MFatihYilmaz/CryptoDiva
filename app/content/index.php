@@ -1,6 +1,6 @@
 <?php
 session_start(); 
-include("api.php");
+include("../layout/api.php");
 ?>
 
 
@@ -19,7 +19,7 @@ include("api.php");
 
 </head>
 <body>
-<?php include("nav.php") ?>
+<?php require("../layout/nav.php") ?>
 
    <div class="container">
     <?php

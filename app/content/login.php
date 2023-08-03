@@ -1,6 +1,6 @@
 <?php
 use Firebase\JWT\Key;
-include_once("instance.php");
+include_once("../includes/instance.php");
 require_once("/var/www/html/mywebsite/app/vendor/autoload.php");
 use \Firebase\JWT\JWT;
 ob_start();

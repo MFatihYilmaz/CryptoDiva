@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION["login"])){
   header("location:./login");
 }
-include("api.php");
+include("../layout/api.php");
 
 ?>
 <!DOCTYPE html>
@@ -28,10 +28,7 @@ include("api.php");
 <body id="page-top">
 <div id="wrapper">
 
-<?php 
-include("sidebar.php");
-?>
-
+<?php require("../layout/sidebar.php") ?>
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
 
@@ -39,7 +36,7 @@ include("sidebar.php");
     <div id="content">
         <!-- Topbar -->
         <?php
-                require("topbar.php");
+                require("../layout/topbar.php");
                 ?>
         <!-- End of Topbar -->
 

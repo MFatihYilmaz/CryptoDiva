@@ -1,5 +1,5 @@
 <?php 
-require_once("instance.php");
+require_once("../includes/instance.php");
 session_start();
 if(isset($_POST['submit'])){
     if(!isset($_POST['pass']) || 3 > strlen($_POST['pass'])) {

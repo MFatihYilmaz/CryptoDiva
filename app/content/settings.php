@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("instance.php");
+require("../includes/instance.php");
 ini_set("display_errors",0);
 $user=$model->getUser($_SESSION["u_id"]);
 $name=$user[0]["firstName"];
@@ -63,7 +63,7 @@ if(isset($_GET["url"]) && $_GET["url"]!="" ){
 <body id="page-top">
 <div id="wrapper">
 <?php 
-include("sidebar.php");
+include("../layout/sidebar.php");
 ?>
 <div id="content-wrapper" class="d-flex flex-column">
 
@@ -73,7 +73,9 @@ include("sidebar.php");
     <!-- Topbar -->
     
     <!-- End of Topbar -->
-
+    <?php 
+  include("../layout/topbar.php");
+    ?>
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
@@ -263,15 +265,15 @@ aria-hidden="true">
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
-<script src="js/sb-admin-2.js"></script>
+<script src="../js/sb-admin-2.min.js"></script>
+<script src="../js/sb-admin-2.js"></script>
 
 </body>
 

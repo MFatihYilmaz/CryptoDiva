@@ -1,11 +1,12 @@
 <?php 
 session_start();
-include("instance.php");
+include("../includes/instance.php");
 ini_set('display_errors',0);
 if($_SERVER["REQUEST_METHOD"]==='POST'){
     $sbj=filter_input(INPUT_POST,'subj',FILTER_SANITIZE_SPECIAL_CHARS);
     $msg=filter_input(INPUT_POST,'message',FILTER_SANITIZE_SPECIAL_CHARS);
     $model->sendMessageToAdmin($_SESSION["u_id"],$sbj,$msg);
+    
 }
 
 ?>
@@ -23,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"]==='POST'){
 <div id="wrapper">
 
 <?php 
-include("sidebar.php");
+include("../layout/sidebar.php");
 ?>
 
 <!-- Content Wrapper -->
@@ -33,7 +34,7 @@ include("sidebar.php");
     <div id="content">
         <!-- Topbar -->
         <?php
-                require("topbar.php");
+                require("../layout/topbar.php");
                 ?>
         <!-- End of Topbar -->
 
@@ -147,15 +148,15 @@ aria-hidden="true">
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
-<script src="js/sb-admin-2.js"></script>
+<script src="../js/sb-admin-2.min.js"></script>
+<script src="../js/sb-admin-2.js"></script>
 
 
 

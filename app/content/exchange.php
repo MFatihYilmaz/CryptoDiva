@@ -1,6 +1,6 @@
 <?php
-include("api.php");
-include("instance.php");
+include("../layout/api.php");
+include("../includes/instance.php");
 if($_SESSION["login"] && isset($_GET["crypto"])){
 ini_set('display_errors', 0);
 

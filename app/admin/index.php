@@ -1,7 +1,13 @@
 <?php 
+use Firebase\JWT\Key;
+include_once("../includes/instance.php");
+require_once("/var/www/html/mywebsite/app/vendor/autoload.php");
+use \Firebase\JWT\JWT;
 if($_SERVER["REQUEST_METHOD"]=="POST"){
   if(isset($_POST["email"]) && isset($_POST["password"])){
     
+  }else{
+    error(402,"Authantication Required");
   }
 }
 

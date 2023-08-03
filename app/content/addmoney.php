@@ -1,7 +1,7 @@
 <?php 
 session_start();
-require("instance.php");
-require("validate.php");
+require("../includes/instance.php");
+require("../includes/validate.php");
 if(!isset($_SESSION["login"])){
     header("location:./login.php");
 }
@@ -31,7 +31,7 @@ if(!isset($_SESSION["login"])){
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-       <?php require("sidebar.php") ?>
+       <?php require("../layout/sidebar.php") ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -40,7 +40,7 @@ if(!isset($_SESSION["login"])){
             <div id="content">
 
                 <!-- Topbar -->
-               <?php require("topbar.php"); ?>
+               <?php require("../layout/topbar.php"); ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
