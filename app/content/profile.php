@@ -1,9 +1,13 @@
 <?php 
 session_start();
-include('../includes/functions.php');
+include('../includes/instance.php');
+ini_set("display_errors",1);
 if(!$_COOKIE["jwt_token"]){
     header("location:./login");
+}else{
+    $resp=$model->getUsd($_SESSION["u_id"]);
 }
+
 ?>
 
 
@@ -24,6 +28,7 @@ if(!$_COOKIE["jwt_token"]){
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+   
 
 </head>
 
@@ -85,7 +90,7 @@ if(!$_COOKIE["jwt_token"]){
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 USD Balance</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$ <?php echo $resp;?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>

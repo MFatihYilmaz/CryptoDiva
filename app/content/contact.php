@@ -2,6 +2,9 @@
 session_start();
 include("../includes/instance.php");
 ini_set('display_errors',0);
+if($_SESSION["login"]){
+  header("location:./login");
+}
 if($_SERVER["REQUEST_METHOD"]==='POST'){
     $sbj=filter_input(INPUT_POST,'subj',FILTER_SANITIZE_SPECIAL_CHARS);
     $msg=filter_input(INPUT_POST,'message',FILTER_SANITIZE_SPECIAL_CHARS);
